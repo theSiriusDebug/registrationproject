@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+            text-align: center;
+            color: #333333;
+        }
+        form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #CCCCCC;
+            margin-bottom: 20px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #FFFFFF;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        button[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+        a {
+            font-size: 16px;
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>User Form</h1>
+    <form action="/" method="post">
+        <div>
+            <label for="nick">Name:</label>
+            <input type="text" id="nick" name="nick" required>
+        </div>
+        <div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+    <a th:text="${error}"></a>
+</div>
+</body>
+</html>

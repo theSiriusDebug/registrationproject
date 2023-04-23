@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome to our Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+            text-align: center;
+            color: #333333;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #555555;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 24px;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Our Website!</h1>
+    <p>Dear <a th:text="${login}"></a>,</p>
+    <p>Congratulations on successfully registering on our website. We are excited to have you join our community!</p>
+    <p>Our goal is to provide you with an enjoyable and rewarding experience, so please do not hesitate to reach out if you have any questions or feedback.</p>
+    <p>Thank you for choosing our website. We look forward to seeing you soon!</p>
+    <div class="message">Best regards,</div>
+    <div class="message">The Team at Our Website</div>
+</div>
+</body>
+</html>
+
+
+
